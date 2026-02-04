@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="hi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>धर्म ज्ञान क्विज</title>
-  </head>
-  <body>
-    <div id="root"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>धर्म ज्ञान क्विज</title>
 
-    <!-- Vite entry -->
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- BASE STYLE: ताकि खाली सफेद/काली स्क्रीन न दिखे -->
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Noto Sans Devanagari", sans-serif;
+    }
+
+    #app {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ROOT CONTAINER -->
+  <div id="app">
+    ✅ index.html सही तरह से लोड हो रही है
+  </div>
+
+  <!-- PLACEHOLDER FOR FUTURE FILES -->
+  <!--
+    <script src="app.js"></script>
+    <script src="quiz.js"></script>
+    <script src="voice.js"></script>
+  -->
+
+</body>
 </html>
