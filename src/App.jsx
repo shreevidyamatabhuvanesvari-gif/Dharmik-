@@ -15,7 +15,7 @@ const QUESTION = {
 };
 
 export default function App() {
-  const [phase, setPhase] = useState("THINK"); // THINK | ANSWER | EXPLAIN
+  const [phase, setPhase] = useState("THINK");
   const [counter, setCounter] = useState(5);
 
   useEffect(() => {
@@ -54,17 +54,14 @@ export default function App() {
         fontFamily: "system-ui",
       }}
     >
-      {/* Header */}
       <div style={{ padding: 12, textAlign: "center", color: "#FF9933" }}>
         {QUESTION.category} · प्रश्न 1/10
       </div>
 
-      {/* Question */}
       <div style={{ padding: 16, fontSize: 22, textAlign: "center" }}>
         {QUESTION.text}
       </div>
 
-      {/* Options */}
       <div
         style={{
           flex: 1,
@@ -82,11 +79,7 @@ export default function App() {
             <div
               key={o.id}
               style={{
-                background: showAnswer
-                  ? isCorrect
-                    ? "#1b5e20"
-                    : "#111"
-                  : "#111",
+                background: showAnswer && isCorrect ? "#1b5e20" : "#111",
                 border: "1px solid #333",
                 borderRadius: 12,
                 padding: 8,
@@ -118,7 +111,6 @@ export default function App() {
         })}
       </div>
 
-      {/* Bottom Area */}
       <div
         style={{
           height: 140,
@@ -154,7 +146,7 @@ export default function App() {
 
         {phase === "ANSWER" && (
           <div style={{ color: "#FF9933", fontSize: 20 }}>
-            सही उत्तर: {QUESTION.options.find(o => o.id === QUESTION.correctId).text}
+            सही उत्तर: अयोध्या
           </div>
         )}
 
@@ -166,4 +158,4 @@ export default function App() {
       </div>
     </div>
   );
-        }
+}
